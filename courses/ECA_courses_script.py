@@ -149,7 +149,10 @@ for each_url in course_links_file:
                     course_data['Offline'] = 'no'
     else:
         actual_cities.append('melbourne')
+        course_data['Face_to_Face'] = 'yes'
+        course_data['Offline'] = 'yes'
     print('LOCATION: ', actual_cities)
+
 
     # career outcomes
     outcome_title = soup.find('h3', text=re.compile('Course Outcomes', re.IGNORECASE))
